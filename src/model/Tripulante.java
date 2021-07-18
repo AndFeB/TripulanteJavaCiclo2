@@ -14,6 +14,8 @@ public class Tripulante {
     private double nota1;
     private double nota2;
     private double nota3;
+    private float numeroIdentificacion;
+    private String email;
 
      /**getters */
      public String getName() {
@@ -31,6 +33,13 @@ public class Tripulante {
      public double getNota3() {
          return nota3;
      }
+     
+     public String getEmail() {
+         return email;
+     }
+     public float getNumeroIdentificacion() {
+         return numeroIdentificacion;
+     }
 
      /**setters */
      public void setName(String name) {
@@ -47,6 +56,13 @@ public class Tripulante {
      }
      public void setNota3(double nota3) {
          this.nota3 = nota3;
+     }
+     
+     public void setEmail(String email) {
+         this.email = email;
+     }
+     public void setNumeroIdentificacion(float numeroIdentificacion) {
+         this.numeroIdentificacion = numeroIdentificacion;
      }
 
      public double getAverage() {
@@ -70,6 +86,14 @@ public class Tripulante {
             return nota3;
         }
     }
-
+    public boolean checkIfPass() {
+        
+        if (getAverage() >= 3){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
 
